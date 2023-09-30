@@ -8,6 +8,10 @@ const PORT = process.env.PORT || 4400
 // middlewares
 app.use(express.json())
 
+// test route
+app.get('/', (req, res) => {
+    res.json('API is working...')
+})
 // routes
 app.use("/api", blogRoute)
 
